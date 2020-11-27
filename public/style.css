@@ -1,0 +1,265 @@
+*{  padding:0; margin: 0; box-sizing: border-box;  font-family: 'IBM Plex Mono', monospace; }
+/* =====================header====================== */
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #FF851B;
+    display: block;
+}
+.inner_header{
+    width: 80%;
+    height: 100%;
+    margin: 0px auto;
+}
+.logo_div{
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 26px;
+}
+.logo_div h1{
+    color:rgba(255, 255, 255, 0.87);
+    font-weight: 200;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
+}
+.logo_div h1::first-letter{
+    font-weight: 600;
+    font-size: 2.7rem;
+    color: wheat;
+}
+.navigation{
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    
+}
+.navigation a , .new_navigation a{
+    text-decoration: none;
+    color: white;
+    margin-right:18px;
+    cursor: pointer;
+}
+.navigation a:hover{
+    color: #ecbf98;
+}
+.navigation a li , .new_navigation a li{
+    list-style: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: relative;
+    
+} 
+.navigation a li::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+
+.navigation a li:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.navigation a li i {
+    display: block;
+}
+
+.new_navigation{
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    float: right;
+     
+}
+
+.new_navigation .new_li{
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+#non_block_a{
+    display: none;
+}
+
+
+
+/* ======================header complete====================== */
+/* =======================start part start==================== */
+
+.main{
+    display: grid;
+    place-items: center;
+}
+.outer_div1{
+    border: 4px dashed  #FF851B ;
+    width: 70%;
+    margin-top: 60px;
+    height: calc(100vh - 210px ) ;
+    background-color: #f8cca881;
+    border-radius: 10px 20px 100px 300px;
+    /* display: grid;
+    place-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+.inner_div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input[type="file"]{
+    display: none;
+}
+label{
+    width: 200px;
+    height: 40px;
+    background-color: #FF851B;
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-box-shadow: -4px -4px 11px 0px rgba(53, 18, 14, 0.77);
+    -moz-box-shadow:    -4px -4px 11px 0px rgba(53, 18, 14, 0.77);
+    box-shadow:-4px -4px 11px 0px rgba(53, 18, 14, 0.77);
+}
+#name_of_image{
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+
+}
+label i{
+    color: black;
+    font-size: 20px;
+    margin-right: 4px;
+    font-weight: 900;
+}
+
+.inner_div2{
+     display: flex;
+     
+}
+.inner_div2 .img1_div , .inner_div2 .img2_div{
+       border: 2px solid rgba(145, 113, 66, 0.781);
+       width: 210px;
+       height: 200px;
+       border-radius: 8px;
+       background-color: #d1cfcc;
+}
+.inner_div2 .img1_div{margin-right: 30px;}
+.inner_div2 .img2_div{margin-left: 30px;}
+.inner_div2 .img1_div #img1{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:880px){
+    .inner_header{
+        width: 100%;
+    }   
+    .logo_div{
+        padding: 0px 0px 0px 18px;
+    } 
+}
+@media(max-width:650px){
+    header{
+        height: 60px;
+    }
+    .inner_header{
+        width: 100%;
+    } 
+    
+    .logo_div{
+        padding: 0px 0px 0px 10px;
+    } 
+    .logo_div h1{
+        font-size: 1.2rem;
+    }
+    .logo_div h1::first-letter{
+        font-size: 1.6rem;
+    }
+    .navigation a {
+        margin-right: 10px;
+        
+    }
+    .navigation a li {
+        font-size: 14px;
+        letter-spacing: .5px;
+    }
+
+}
+
+@media(max-width:480px){
+    .navigation #block_a{
+        display:none ;
+    }
+    #non_block_a{
+        display: block;
+    }
+    /* .navigation a li i{
+        display: block;
+    } */
+}
+
+
+
+
+
+/* 
+.outer_div {
+    background-color: aqua;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.inner_div {
+    background-color: brown;
+    border: 1px solid blanchedalmond;
+    width: 50%;
+} */
